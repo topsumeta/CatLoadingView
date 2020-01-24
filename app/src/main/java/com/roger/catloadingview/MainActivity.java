@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mView = new CatLoadingView();
-        mView.setBackgroundColor(Color.parseColor("#000000"));
+        mView.setBackgroundColor(Color.parseColor("#00574B"));
         findViewById(R.id.button).setOnClickListener(
                 new View.OnClickListener() {
                     @Override public void onClick(View v) {

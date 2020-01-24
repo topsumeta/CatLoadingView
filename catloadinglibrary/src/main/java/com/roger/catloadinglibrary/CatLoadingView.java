@@ -71,8 +71,9 @@ public class CatLoadingView extends DialogFragment {
 
             background = view.findViewById(R.id.background);
 
-            if (color !=0)
+            if (color !=0){
                 background.setBackgroundColor(color);
+            }
 
             mouse = view.findViewById(R.id.mouse);
 
@@ -80,19 +81,19 @@ public class CatLoadingView extends DialogFragment {
 
             eye_right = view.findViewById(R.id.eye_right);
 
-            eyelid_left = (EyelidView) view.findViewById(R.id.eyelid_left);
+            eyelid_left = view.findViewById(R.id.eyelid_left);
 
             eyelid_left.setColor(Color.parseColor("#d0ced1"));
 
             eyelid_left.setFromFull(true);
 
-            eyelid_right = (EyelidView) view.findViewById(R.id.eyelid_right);
+            eyelid_right = view.findViewById(R.id.eyelid_right);
 
             eyelid_right.setColor(Color.parseColor("#d0ced1"));
 
             eyelid_right.setFromFull(true);
 
-            mGraduallyTextView = (GraduallyTextView) view.findViewById(R.id.graduallyTextView);
+            mGraduallyTextView = view.findViewById(R.id.graduallyTextView);
 
             if (!TextUtils.isEmpty(text)) {
                 mGraduallyTextView.setText(text);
