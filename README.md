@@ -17,8 +17,14 @@ Import this project into Android Studio... it's built with it.
 
 #### Gradle
 
+#### Project
 ```
-implementation 'com.roger.catloadinglibrary:catloadinglibrary:1.0.4'
+maven { url "https://jitpack.io" }
+```
+
+#### Module
+```
+implementation 'com.github.topsumeta:catloadingview:2.0.1'
 ```
 
 ####  config in java code
