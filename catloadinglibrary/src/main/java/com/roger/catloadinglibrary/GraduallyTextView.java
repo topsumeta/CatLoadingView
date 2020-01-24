@@ -4,6 +4,8 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -14,7 +16,7 @@ import android.widget.EditText;
 /**
  * Created by Administrator on 2016/3/30.
  */
-public class GraduallyTextView extends EditText {
+public class GraduallyTextView extends android.support.v7.widget.AppCompatEditText {
 
     private CharSequence text;
     private int startY = 0;
@@ -30,24 +32,28 @@ public class GraduallyTextView extends EditText {
     private ValueAnimator valueAnimator;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public GraduallyTextView(Context context) {
         super(context);
         init();
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public GraduallyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public GraduallyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void init() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
@@ -110,6 +116,7 @@ public class GraduallyTextView extends EditText {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onVisibilityChanged(View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
